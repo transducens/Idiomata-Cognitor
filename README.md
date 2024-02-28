@@ -35,13 +35,25 @@ weighted avg   0.98      0.98    0.98      9970
 ```
 
 ## Install
+Clone the repository and install the dependencies.
+```
+git clone https://github.com/transducens/Romance-languages-identifier.git
+cd Romance-languages-identifier
+pip install requirements.txt
+```
+If you would like to use our trained model, you will need to extract it.
+```
+gzip -d model.pkl.gz
+```
+
 
 ## Use
+The [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py) expects the sentences to be identified by standard input and the model to be used as a parameter. The output will be the input sentences with the language identification separated by a tab.
 ```
 cat file | python lang_identification.py --model model.pkl > file_identidied
 ```
 
-## Training
+## Train
 You can use the [training script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification_train.py) and monolingual corpora to train your own classifier. The script will divide the provided corpora into 70% for training and 30% for testing.
 ```
 python lang_identification_train.py \
