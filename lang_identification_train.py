@@ -74,7 +74,7 @@ def preproccess_raw_data(file_paths):
 
 def main() -> None:
 
-    parser = argparse.ArgumentParser(description="Tain a language identificator for romance languages")
+    parser = argparse.ArgumentParser(description="Train Romance language identifier from monolingual corpora")
     parser.add_argument("--spa", type=str, required=True, help="Spanish training corpus")
     parser.add_argument("--cat", type=str, required=True, help="Catalan training corpus")
     parser.add_argument("--arg", type=str, required=True, help="Aragonese training corpus")
