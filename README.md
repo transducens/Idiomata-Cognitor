@@ -38,7 +38,7 @@ weighted avg   0.98      0.98    0.98      9970
 
 ## Use
 ```
-cat file | python lang_identification.py > file_identidied
+cat file | python lang_identification.py --model model.pkl > file_identidied
 ```
 
 ## Training
