@@ -42,3 +42,18 @@ cat file | python lang_identification.py --model model.pkl > file_identidied
 ```
 
 ## Training
+You can use the [training script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification_train.py) and monolingual corpora to train your own classifier. The script will divide the provided corpora into 70% for training and 30% for testing.
+```
+python lang_identification_train.py \
+      --spa spanish_monolingual_corpus.txt \
+      --cat catalan_monolingual_corpus.txt \
+      --arg aragonese_monolingual_corpus.txt \
+      --arn aranese_monolingual_corpus.txt \
+      --oci occitan_monolingual_corpus.txt \
+      --ast asturian_monolingual_corpus.txt \
+      --ita italian_monolingual_corpus.txt \
+      --glg galician_monolingual_corpus.txt \
+      --fra french_monolingual_corpus.txt \
+      --por portuguese_monolingual_corpus.txt \
+      --output-model your_model.pkl
+```
