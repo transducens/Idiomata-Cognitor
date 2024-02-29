@@ -1,18 +1,18 @@
 # Language identifier for Romance languages
 
-This repository contains a language classifier produced as part of the R+D+i poject [Lightweight neural translation technologies for low-resource languages (LiLowLa)](https://transducens.dlsi.ua.es/lilowla/) (PID2021-127999NB-I00) funded by the Spanish Ministry
-of Science and Innovation (MCIN), the Spanish Research Agency (AEI/10.13039/501100011033) and the European Regional Development Fund A way to make Europe.
-
+This repository contains a multilingual language classifier for some Romance languages.
 
 ## Description
 
-The classifier is able to identify 10 languages:
+The classifier is able to identify the following 10 languages:
+
 ```
 Spanish, Catalan, Galician, Asturian, Aragonese, Aranese, Occitan, Portuguese, Italian, French
 ```
-The published [model](https://github.com/transducens/Romance-languages-identifier/blob/main/model.pkl.gz) was trained on fragments from the [Wikimedia](https://opus.nlpl.eu/wikimedia/ast&es/v20230407/wikimedia) and [Wikimatrix](https://opus.nlpl.eu/WikiMatrix/an&es/v1/WikiMatrix) corpora, with the exception of Aranese, for which the [literary corpus from iberian_corpora](https://github.com/transducens/iberian_corpora/blob/main/aranese/literary.gz) was used.
 
-The classification report on the Flores+ dev set is as follows:
+The [model](https://github.com/transducens/Romance-languages-identifier/blob/main/model.pkl.gz) was trained on fragments from the [Wikimedia](https://opus.nlpl.eu/wikimedia/ast&es/v20230407/wikimedia) and [Wikimatrix](https://opus.nlpl.eu/WikiMatrix/an&es/v1/WikiMatrix) corpora, with the exception of Aranese, for which the [literary corpus from iberian_corpora](https://github.com/transducens/iberian_corpora/blob/main/aranese/literary.gz) was used.
+
+The classification report on the [FLORES+](https://github.com/openlanguagedata/flores) dev set is as follows:
 
 ```
 Accuracy: 0.9763289869608827
@@ -35,26 +35,33 @@ weighted avg   0.98      0.98    0.98      9970
 ```
 
 ## Install
+
 Clone the repository and install the dependencies.
+
 ```
 git clone https://github.com/transducens/Romance-languages-identifier.git
 cd Romance-languages-identifier
 pip install requirements.txt
 ```
+
 If you would like to use our trained model, you will need to extract it.
+
 ```
 gzip -d model.pkl.gz
 ```
 
-
 ## Use
-The [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py) expects the sentences to be identified by standard input and the model to be used as a parameter. The output will be the input sentences with the language identification separated by a tab.
+
+The [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py) expects the sentences to be identified in the standard input and the model to be used as a parameter. The output will be the input sentences and the corresponding language identifier separated by a tab.
+
 ```
-cat file | python lang_identification.py --model model.pkl > file_identidied
+cat file | python lang_identification.py --model model.pkl > file_id
 ```
 
 ## Train
+
 You can use the [training script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification_train.py) and monolingual corpora to train your own classifier. The script will divide the provided corpora into 70% for training and 30% for testing.
+
 ```
 python lang_identification_train.py \
       --spa spanish_monolingual_corpus.txt \
@@ -69,3 +76,7 @@ python lang_identification_train.py \
       --por portuguese_monolingual_corpus.txt \
       --output-model your_model.pkl
 ```
+
+## Acknowledgements
+
+This program has been produced as part of the research project [Lightweight neural translation technologies for low-resource languages (LiLowLa)](https://transducens.dlsi.ua.es/lilowla/) (PID2021-127999NB-I00) funded by the Spanish Ministry of Science and Innovation (MCIN), the Spanish Research Agency (AEI/10.13039/501100011033) and the European Regional Development Fund A way to make Europe.
