@@ -52,10 +52,20 @@ gzip -d model.pkl.gz
 
 ## Use
 
-The [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py) expects the sentences to be identified in the standard input and the model to be used as a parameter. The output will be the input sentences and the corresponding language identifier separated by a tab.
+To use the [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py), you would need to provide the sentences to be identified as input via standard input, along with the model to be used as a parameter. The output will then be the input sentences along with the corresponding language identifier separated by a tab.
+
+For example, if you have a list of sentences in a file named `input.txt`, you can use the following command:
 
 ```
-cat file | python lang_identification.py --model model.pkl > file_id
+cat input.txt | python lang_identification.py --model model.pkl
+```
+
+The output will be in the format:
+
+```
+sentence1   language1
+sentence2   language2
+...
 ```
 
 ## Train
@@ -76,6 +86,7 @@ python lang_identification_train.py \
       --por portuguese_monolingual_corpus.txt \
       --output-model your_model.pkl
 ```
+Once training is complete, the script will produce a classification report similar to the one shown in the Description section. This report will be generated over the 30% of the corpora that was reserved for testing.
 
 ## Acknowledgements
 
