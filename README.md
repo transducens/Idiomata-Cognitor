@@ -41,7 +41,7 @@ Clone the repository and install the dependencies.
 ```
 git clone https://github.com/transducens/Romance-languages-identifier.git
 cd Romance-languages-identifier
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 If you would like to use our trained model, you will need to extract it.
