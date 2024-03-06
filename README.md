@@ -2,7 +2,7 @@
 
 ## Language identifier for Romance languages
 
-Idiomata Cognitor is a multilingual language classifier focused on a number of Romance languages, trained with Bayesian methods. It complements general language detectors by offering finer classification within Romance languages.
+Idiomata Cognitor is a multilingual highly-accurate language classifier focused on a number of Romance languages, trained with Bayesian methods. It complements general language detectors by offering finer classification within Romance languages.
 
 ## Description
 
