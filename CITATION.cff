@@ -1,0 +1,45 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Idiomata Cognitor
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Aarón
+    family-names: Galiano-Jiménez
+    email: aaron.galiano@ua.es
+    affiliation: 'Universitat d''Alacant , Spain'
+    orcid: 'https://orcid.org/0000-0002-8107-1411'
+  - given-names: Felipe
+    family-names: Sánchez-Martínez
+    email: fsanchez@dlsi.ua.es
+    affiliation: 'Universitat d''Alacant, Spain'
+    orcid: 'https://orcid.org/0000-0002-2295-2630'
+  - given-names: Víctor M.
+    family-names: Sánchez-Cartagena
+    email: vmsanchez@dlsi.ua.es
+    affiliation: 'Universitat d''Alacant, Spain'
+    orcid: 'https://orcid.org/0000-0001-9600-6885'
+  - given-names: Juan Antonio
+    family-names: Pérez-Ortiz
+    email: japerez@ua.es
+    affiliation: 'Universitat d''Alacant, Spain'
+    orcid: 'https://orcid.org/0000-0001-7659-8908'
+repository-code: >-
+  https://github.com/transducens/Romance-languages-identifier
+abstract: >-
+  Idiomata Cognitor is a language identifier focused on a
+  number of Romance languages, trained with Bayesian
+  methods. It complements general language detectors by
+  offering finer classification within Romance languages.
+keywords:
+  - language identification
+  - Romance languages
+  - language classifier
+license: AGPL-3.0
+commit: 92a223b46791d1f9d1e8a49343bf0de32d424d12
+version: '0.1'
+date-released: '2024-03-06'

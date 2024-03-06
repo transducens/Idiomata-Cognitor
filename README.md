@@ -1,18 +1,16 @@
-# Language identifier for Romance languages
+# Idiomata Cognitor
 
-This repository contains a multilingual language classifier for some Romance languages.
+## Language identifier for Romance languages
+
+Idiomata Cognitor is a multilingual language classifier focused on a number of Romance languages, trained with Bayesian methods. It complements general language detectors by offering finer classification within Romance languages.
 
 ## Description
 
-The classifier is able to identify the following 10 languages:
-
-```
-Spanish, Catalan, Galician, Asturian, Aragonese, Aranese, Occitan, Portuguese, Italian, French
-```
+The classifier is able to identify the following 10 languages: Aragonese, Aranese, Asturian, Catalan, French, Galician, Italian, Occitan, Portuguese, Spanish.
 
 The [model](https://github.com/transducens/Romance-languages-identifier/blob/main/model.pkl.gz) was trained on fragments from the [Wikimedia](https://opus.nlpl.eu/wikimedia/ast&es/v20230407/wikimedia) and [Wikimatrix](https://opus.nlpl.eu/WikiMatrix/an&es/v1/WikiMatrix) corpora, with the exception of Aranese, for which the [literary corpus from iberian_corpora](https://github.com/transducens/iberian_corpora/blob/main/aranese/literary.gz) was used.
 
-The classification report on the [FLORES+](https://github.com/openlanguagedata/flores) dev set is as follows:
+The classification report emitted by the classifier on a multilingual joint corpus of [FLORES+](https://github.com/openlanguagedata/flores) dev sets is as follows:
 
 ```
 Accuracy: 0.9763289869608827
@@ -36,7 +34,7 @@ weighted avg   0.98      0.98    0.98      9970
 
 ## Install
 
-Clone the repository and install the dependencies.
+Clone the repository and install the dependencies:
 
 ```
 git clone https://github.com/transducens/Romance-languages-identifier.git
@@ -50,11 +48,11 @@ If you would like to use our trained model, you will need to extract it.
 gzip -d model.pkl.gz
 ```
 
-## Use
+## Usage
 
-To use the [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py), you would need to provide the sentences to be identified as input via standard input, along with the model to be used as a parameter. The output will then be the input sentences along with the corresponding language identifier separated by a tab.
+To use the [classification script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification.py), you would need to provide the sentences to be identified via standard input, along with the model to be used as an argument. The output will then be the input sentences along with the corresponding language identifier separated by a tab.
 
-For example, if you have a list of sentences in a file named `input.txt`, you can use the following command:
+For example, if you have a list of sentences in the file `input.txt`, you can use the following command:
 
 ```
 cat input.txt | python lang_identification.py --model model.pkl
@@ -68,7 +66,7 @@ sentence2   language2
 ...
 ```
 
-## Train
+## Training
 
 You can use the [training script](https://github.com/transducens/Romance-languages-identifier/blob/main/lang_identification_train.py) and monolingual corpora to train your own classifier. The script will divide the provided corpora into 70% for training and 30% for testing.
 
@@ -86,8 +84,24 @@ python lang_identification_train.py \
       --por portuguese_monolingual_corpus.txt \
       --output-model your_model.pkl
 ```
-Once training is complete, the script will produce a classification report similar to the one shown in the Description section. This report will be generated over the 30% of the corpora that was reserved for testing.
+
+Once training is complete, the script will produce a classification report similar to the one shown in the [Description](#description) section above. This report will be generated over the 30% of the corpora that was reserved for testing.
+
+## Citing this work
+
+If you use this tool as part of your developments, please cite it as follows:
+
+```
+@misc{idiomatacognitor,
+author = {Galiano-Jiménez, Aarón and Sánchez-Martínez, Felipe and Sánchez-Cartagena, Víctor M. and Pérez-Ortiz, Juan Antonio},
+title = {Idiomata Cognitor},
+url = {https://github.com/transducens/Romance-languages-identifier},
+year = {2024}
+}
+```
+
+A `CITATION.cff` file is also included in this repository.
 
 ## Acknowledgements
 
-This program has been produced as part of the research project [Lightweight neural translation technologies for low-resource languages (LiLowLa)](https://transducens.dlsi.ua.es/lilowla/) (PID2021-127999NB-I00) funded by the Spanish Ministry of Science and Innovation (MCIN), the Spanish Research Agency (AEI/10.13039/501100011033) and the European Regional Development Fund A way to make Europe.
+This tool has been produced as part of the research project [Lightweight neural translation technologies for low-resource languages (LiLowLa)](https://transducens.dlsi.ua.es/lilowla/) (PID2021-127999NB-I00) funded by the Spanish Ministry of Science and Innovation (MCIN), the Spanish Research Agency (AEI/10.13039/501100011033) and the European Regional Development Fund A way to make Europe.
