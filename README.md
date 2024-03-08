@@ -45,11 +45,7 @@ cd Romance-languages-identifier
 pip install -r requirements.txt
 ```
 
-If you would like to use our trained model, you will need to extract it.
-
-```
-gzip -d model.pkl.gz
-```
+If you would like to use our trained model, you will need to unzip it.
 
 ## Usage
 
