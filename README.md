@@ -31,7 +31,7 @@ accuracy                         0.98      9970
 macro avg      0.98      0.98    0.98      9970
 weighted avg   0.98      0.98    0.98      9970
 ```
-As of 08/02/2024, the FLORES+ versions of Aragonese and Aranese are not published. They will be released soon as a result of the [EMNLP 2024 Shared Task "Translation into Low-Resource Languages of Spain"]{https://www2.statmt.org/wmt24/romance-task.html}.
+As of 08/02/2024, the FLORES+ versions of Aragonese and Aranese are not published. They will be released soon as a result of the [EMNLP 2024 Shared Task "Translation into Low-Resource Languages of Spain"](https://www2.statmt.org/wmt24/romance-task.html).
 
 Note that the median length of sentences from the FLORES+ dev set is 22 words. It is possible that the results will vary with shorter lengths.
 
