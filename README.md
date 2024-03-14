@@ -8,7 +8,7 @@ Idiomata Cognitor is a multilingual highly-accurate language classifier focused 
 
 The classifier is able to identify the following 10 languages: Aragonese, Aranese, Asturian, Catalan, French, Galician, Italian, Occitan, Portuguese, Spanish.
 
-The [model](https://github.com/transducens/Romance-languages-identifier/blob/main/model.pkl.gz) was trained on fragments from the [Wikimedia](https://opus.nlpl.eu/wikimedia/ast&es/v20230407/wikimedia) and [Wikimatrix](https://opus.nlpl.eu/WikiMatrix/an&es/v1/WikiMatrix) corpora, with the exception of Aranese, for which the [literary corpus from iberian_corpora](https://github.com/transducens/iberian_corpora/blob/main/aranese/literary.gz) was used.
+The [model](https://github.com/transducens/Romance-languages-identifier/blob/main/model.pkl.gz) was trained on fragments from the [Wikimedia](https://opus.nlpl.eu/wikimedia/ast&es/v20230407/wikimedia) and [Wikimatrix](https://opus.nlpl.eu/WikiMatrix/an&es/v1/WikiMatrix) corpora, with the exception of Aranese, for which the literary corpus from [PILAR](https://github.com/transducens/PILAR) was used.
 
 The classification report emitted by the classifier on a multilingual joint corpus of [FLORES+](https://github.com/openlanguagedata/flores) dev sets is as follows:
 
