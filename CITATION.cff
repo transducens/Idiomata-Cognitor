@@ -11,25 +11,20 @@ authors:
   - given-names: Aarón
     family-names: Galiano-Jiménez
     email: aaron.galiano@ua.es
-    affiliation: 'Universitat d''Alacant , Spain'
+    affiliation: 'Universitat d'Alacant , Transducens research group, Spain'
     orcid: 'https://orcid.org/0000-0002-8107-1411'
   - given-names: Felipe
     family-names: Sánchez-Martínez
     email: fsanchez@dlsi.ua.es
-    affiliation: 'Universitat d''Alacant, Spain'
+    affiliation: 'Universitat d'Alacant , Transducens research group, Spain'
     orcid: 'https://orcid.org/0000-0002-2295-2630'
-  - given-names: Víctor M.
-    family-names: Sánchez-Cartagena
-    email: vmsanchez@dlsi.ua.es
-    affiliation: 'Universitat d''Alacant, Spain'
-    orcid: 'https://orcid.org/0000-0001-9600-6885'
   - given-names: Juan Antonio
     family-names: Pérez-Ortiz
     email: japerez@ua.es
-    affiliation: 'Universitat d''Alacant, Spain'
+    affiliation: 'Universitat d'Alacant , Transducens research group, Spain'
     orcid: 'https://orcid.org/0000-0001-7659-8908'
 repository-code: >-
-  https://github.com/transducens/Romance-languages-identifier
+  https://github.com/transducens/idiomata_cognitor
 abstract: >-
   Idiomata Cognitor is a language identifier focused on a
   number of Romance languages, trained with Bayesian
@@ -39,7 +34,7 @@ keywords:
   - language identification
   - Romance languages
   - language classifier
-license: AGPL-3.0
+license: Apache-2.0
 commit: 92a223b46791d1f9d1e8a49343bf0de32d424d12
-version: '0.1'
-date-released: '2024-03-06'
+version: '1.0.0'
+date-released: '2024-03-14'
