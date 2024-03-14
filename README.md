@@ -92,9 +92,9 @@ If you use this tool as part of your developments, please cite it as follows:
 
 ```
 @misc{idiomatacognitor,
-  author = {Galiano-Jiménez, Aarón and Sánchez-Martínez, Felipe and Sánchez-Cartagena, Víctor M. and Pérez-Ortiz, Juan Antonio},
+  author = {Galiano-Jiménez, Aarón and Sánchez-Martínez, Felipe and Pérez-Ortiz, Juan Antonio},
   title = {Idiomata Cognitor},
-  url = {https://github.com/transducens/Romance-languages-identifier},
+  url = {https://github.com/transducens/idiomata_cognitor},
   year = {2024}
 }
 ```
