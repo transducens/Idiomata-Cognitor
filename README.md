@@ -40,8 +40,8 @@ Note that the median length of sentences from the FLORES+ dev set is 22 words. I
 Clone the repository and install the dependencies:
 
 ```
-git clone https://github.com/transducens/Romance-languages-identifier.git
-cd Romance-languages-identifier
+git clone https://github.com/transducens/idiomata_cognitor.git
+cd idiomata_cognitor
 pip install -r requirements.txt
 ```
 
